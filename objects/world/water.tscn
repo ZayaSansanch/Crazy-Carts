@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdraaxqvrfo2v"]
+
+[ext_resource type="Texture2D" uid="uid://ctgquxajyawqn" path="res://assets/RPG Nature Tileset.png" id="1_2pd01"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0kd8u"]
+size = Vector2(64, 64)
+
+[node name="Block" type="RigidBody2D"]
+gravity_scale = 0.0
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0kd8u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_2pd01")
+region_enabled = true
+region_rect = Rect2(32, 64, 32, 32)

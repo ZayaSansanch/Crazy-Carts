@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=3 uid="uid://buvcwpavuo4n2"]
+
+[ext_resource type="Script" path="res://player1.gd" id="1_sif7u"]
+[ext_resource type="Texture2D" uid="uid://dq0ua3qm6rie7" path="res://assets/cars.png" id="2_sq2fq"]
+
+[sub_resource type="ParticleProcessMaterial" id="1"]
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="Gradient" id="2"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="3"]
+gradient = SubResource("2")
+width = 5
+
+[sub_resource type="ParticleProcessMaterial" id="4"]
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="Gradient" id="5"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="6"]
+gradient = SubResource("5")
+width = 5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vc1t4"]
+size = Vector2(46.5, 92)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_sif7u")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+texture = ExtResource("2_sq2fq")
+region_enabled = true
+region_rect = Rect2(246.541, 122.821, 52.1597, 92.3914)
+
+[node name="Particles2D" type="GPUParticles2D" parent="Sprite"]
+visible = false
+position = Vector2(-1.68256, 31.4823)
+rotation = 3.14159
+process_material = SubResource("1")
+texture = SubResource("3")
+lifetime = 2.0
+visibility_rect = Rect2(-25, -25, 50, 50)
+
+[node name="Particles2D2" type="GPUParticles2D" parent="Sprite"]
+show_behind_parent = true
+position = Vector2(-17.9354, 32.3763)
+amount = 1000
+process_material = SubResource("4")
+texture = SubResource("6")
+lifetime = 5.0
+visibility_rect = Rect2(-500, -500, 1000, 1000)
+
+[node name="Particles2D3" type="GPUParticles2D" parent="Sprite"]
+show_behind_parent = true
+position = Vector2(18.4658, 32.1297)
+amount = 1000
+process_material = SubResource("4")
+texture = SubResource("6")
+lifetime = 5.0
+visibility_rect = Rect2(-500, -500, 1000, 1000)
+
+[node name="Particles2D5" type="GPUParticles2D" parent="Sprite"]
+show_behind_parent = true
+position = Vector2(-17.7046, -31.7189)
+amount = 1000
+process_material = SubResource("4")
+texture = SubResource("6")
+lifetime = 5.0
+visibility_rect = Rect2(-500, -500, 1000, 1000)
+
+[node name="Particles2D4" type="GPUParticles2D" parent="Sprite"]
+show_behind_parent = true
+position = Vector2(18.6967, -31.9655)
+amount = 1000
+process_material = SubResource("4")
+texture = SubResource("6")
+lifetime = 5.0
+visibility_rect = Rect2(-500, -500, 1000, 1000)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+process_mode = 3
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(0.25, 0)
+shape = SubResource("RectangleShape2D_vc1t4")
