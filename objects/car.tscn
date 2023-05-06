@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://buvcwpavuo4n2"]
+[gd_scene load_steps=11 format=3 uid="uid://dp17vb3mffvvy"]
 
-[ext_resource type="Script" path="res://player1.gd" id="1_sif7u"]
+[ext_resource type="Script" path="res://scripts/car.gd" id="1_f07fl"]
 [ext_resource type="Texture2D" uid="uid://dq0ua3qm6rie7" path="res://assets/cars.png" id="2_sq2fq"]
 
 [sub_resource type="ParticleProcessMaterial" id="1"]
@@ -26,18 +26,24 @@ colors = PackedColorArray(0, 0, 0, 1)
 gradient = SubResource("5")
 width = 5
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vc1t4"]
-size = Vector2(46.5, 92)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d3208"]
+radius = 21.0
+height = 86.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d43do"]
+radius = 4.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-script = ExtResource("1_sif7u")
+wall_min_slide_angle = 0.0
+platform_on_leave = 2
+script = ExtResource("1_f07fl")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture_filter = 1
 texture_repeat = 1
 texture = ExtResource("2_sq2fq")
 region_enabled = true
-region_rect = Rect2(246.541, 122.821, 52.1597, 92.3914)
+region_rect = Rect2(65, 346, 45, 86)
 
 [node name="Particles2D" type="GPUParticles2D" parent="Sprite"]
 visible = false
@@ -84,9 +90,92 @@ texture = SubResource("6")
 lifetime = 5.0
 visibility_rect = Rect2(-500, -500, 1000, 1000)
 
+[node name="Sprite2" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+texture = ExtResource("2_sq2fq")
+region_enabled = true
+region_rect = Rect2(122, 346, 45, 86)
+
+[node name="Particles2D" type="GPUParticles2D" parent="Sprite2"]
+visible = false
+position = Vector2(-1.68256, 31.4823)
+rotation = 3.14159
+process_material = SubResource("1")
+texture = SubResource("3")
+lifetime = 2.0
+visibility_rect = Rect2(-25, -25, 50, 50)
+
+[node name="Particles2D2" type="GPUParticles2D" parent="Sprite2"]
+show_behind_parent = true
+position = Vector2(-17.9354, 32.3763)
+amount = 1000
+process_material = SubResource("4")
+texture = SubResource("6")
+lifetime = 5.0
+visibility_rect = Rect2(-500, -500, 1000, 1000)
+
+[node name="Particles2D3" type="GPUParticles2D" parent="Sprite2"]
+show_behind_parent = true
+position = Vector2(18.4658, 32.1297)
+amount = 1000
+process_material = SubResource("4")
+texture = SubResource("6")
+lifetime = 5.0
+visibility_rect = Rect2(-500, -500, 1000, 1000)
+
+[node name="Particles2D5" type="GPUParticles2D" parent="Sprite2"]
+show_behind_parent = true
+position = Vector2(-17.7046, -31.7189)
+amount = 1000
+process_material = SubResource("4")
+texture = SubResource("6")
+lifetime = 5.0
+visibility_rect = Rect2(-500, -500, 1000, 1000)
+
+[node name="Particles2D4" type="GPUParticles2D" parent="Sprite2"]
+show_behind_parent = true
+position = Vector2(18.6967, -31.9655)
+amount = 1000
+process_material = SubResource("4")
+texture = SubResource("6")
+lifetime = 5.0
+visibility_rect = Rect2(-500, -500, 1000, 1000)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 process_mode = 3
 texture_filter = 1
 texture_repeat = 1
-position = Vector2(0.25, 0)
-shape = SubResource("RectangleShape2D_vc1t4")
+shape = SubResource("CapsuleShape2D_d3208")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+process_mode = 3
+visible = false
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(-20, -31)
+shape = SubResource("CircleShape2D_d43do")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+process_mode = 3
+visible = false
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(20, -31)
+shape = SubResource("CircleShape2D_d43do")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+process_mode = 3
+visible = false
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(-20, 33)
+shape = SubResource("CircleShape2D_d43do")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+process_mode = 3
+visible = false
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(19, 32)
+shape = SubResource("CircleShape2D_d43do")

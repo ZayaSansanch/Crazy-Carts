@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cokd4ob8siiav"]
+
+[ext_resource type="Texture2D" uid="uid://ctgquxajyawqn" path="res://assets/RPG Nature Tileset.png" id="1_06igv"]
+
+[node name="Block" type="RigidBody2D"]
+gravity_scale = 0.0
+freeze = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_06igv")
+region_enabled = true
+region_rect = Rect2(64, 32, 32, 32)

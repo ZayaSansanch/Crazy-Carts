@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dg5hi67ssswmm"]
 
-[ext_resource type="FontFile" uid="uid://b4ymg0yr3jyxa" path="res://assets/Roboto-Regular.ttf" id="1_4yqj3"]
+[ext_resource type="FontFile" uid="uid://dwb8178gf6rua" path="res://assets/PressStart2P-Regular.ttf" id="1_yobnl"]
 
 [node name="Up_and_down_lines" type="Control"]
 layout_mode = 3
@@ -28,53 +28,63 @@ offset_bottom = 720.0
 color = Color(0.262745, 0.262745, 0.262745, 1)
 
 [node name="Label" type="Label" parent="."]
+texture_filter = 1
+texture_repeat = 1
 layout_mode = 0
 offset_left = 32.0
 offset_top = 32.0
 offset_right = 173.0
 offset_bottom = 95.0
-theme_override_fonts/font = ExtResource("1_4yqj3")
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("1_yobnl")
+theme_override_font_sizes/font_size = 36
 text = "C: 100"
 
 [node name="Label2" type="Label" parent="."]
+texture_filter = 1
+texture_repeat = 1
 layout_mode = 0
-offset_left = 1096.0
+offset_left = 1072.0
 offset_top = 32.0
-offset_right = 1237.0
+offset_right = 1252.0
 offset_bottom = 95.0
-theme_override_fonts/font = ExtResource("1_4yqj3")
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("1_yobnl")
+theme_override_font_sizes/font_size = 36
 text = "P: 12"
 
 [node name="Label3" type="Label" parent="."]
+texture_filter = 1
+texture_repeat = 1
 layout_mode = 0
-offset_left = 568.0
+offset_left = 528.0
 offset_top = 32.0
-offset_right = 709.0
+offset_right = 744.0
 offset_bottom = 95.0
-theme_override_fonts/font = ExtResource("1_4yqj3")
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("1_yobnl")
+theme_override_font_sizes/font_size = 36
 text = "L: 239"
 
 [node name="Button2" type="Button" parent="."]
+texture_filter = 1
+texture_repeat = 1
 layout_mode = 0
 offset_left = 16.0
 offset_top = 608.0
 offset_right = 208.0
 offset_bottom = 708.0
 scale = Vector2(1, 0.964904)
-theme_override_fonts/font = ExtResource("1_4yqj3")
-theme_override_font_sizes/font_size = 60
+theme_override_fonts/font = ExtResource("1_yobnl")
+theme_override_font_sizes/font_size = 36
 text = "Parts"
 
 [node name="Button3" type="Button" parent="."]
+texture_filter = 1
+texture_repeat = 1
 layout_mode = 0
 offset_left = 1072.0
 offset_top = 608.0
 offset_right = 1264.0
 offset_bottom = 708.0
 scale = Vector2(1, 0.964904)
-theme_override_fonts/font = ExtResource("1_4yqj3")
-theme_override_font_sizes/font_size = 60
+theme_override_fonts/font = ExtResource("1_yobnl")
+theme_override_font_sizes/font_size = 36
 text = "Carts"

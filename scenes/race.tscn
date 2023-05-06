@@ -1,0 +1,910 @@
+[gd_scene load_steps=29 format=3 uid="uid://by5cvc24tcijr"]
+
+[ext_resource type="PackedScene" uid="uid://dsh3d3y0m56rl" path="res://objects/world/left.tscn" id="1_s0mxl"]
+[ext_resource type="PackedScene" uid="uid://hmrabaerinaw" path="res://objects/world/down_left.tscn" id="2_v7qjj"]
+[ext_resource type="PackedScene" uid="uid://hmr57x8j65ui" path="res://objects/world/down.tscn" id="3_pc4rd"]
+[ext_resource type="PackedScene" uid="uid://vkmjktj525vd" path="res://objects/world/down_right.tscn" id="4_a1uid"]
+[ext_resource type="PackedScene" uid="uid://hw0kdekq6u52" path="res://objects/world/right.tscn" id="5_hmrdw"]
+[ext_resource type="PackedScene" uid="uid://dd3qmps6c7x6m" path="res://objects/world/up_left.tscn" id="6_cee8s"]
+[ext_resource type="PackedScene" uid="uid://deyrehaxs5qtd" path="res://objects/world/up.tscn" id="7_je5jo"]
+[ext_resource type="PackedScene" uid="uid://bc1j1coaiupva" path="res://objects/world/up_left_inverse.tscn" id="8_xejox"]
+[ext_resource type="PackedScene" uid="uid://dm28ntbqt07e8" path="res://objects/world/up_right_inverse.tscn" id="9_cs6dc"]
+[ext_resource type="PackedScene" uid="uid://dolr27lvwmwji" path="res://objects/world/down_right_inverse.tscn" id="10_88grr"]
+[ext_resource type="PackedScene" uid="uid://bhou31jomkuw1" path="res://objects/world/up_right.tscn" id="11_aubhi"]
+[ext_resource type="PackedScene" uid="uid://br072mor0r56b" path="res://objects/world/down_left_inverse.tscn" id="12_gs4ch"]
+[ext_resource type="PackedScene" uid="uid://ba3vt1llskpqn" path="res://objects/world/grass.tscn" id="14_4errp"]
+[ext_resource type="Script" path="res://scripts/Camera.gd" id="15_l0uvh"]
+[ext_resource type="PackedScene" uid="uid://ccyr3bbdjybhu" path="res://objects/world/tree_middle.tscn" id="16_1b7a3"]
+[ext_resource type="PackedScene" uid="uid://dp17vb3mffvvy" path="res://objects/car.tscn" id="16_6y4pe"]
+[ext_resource type="PackedScene" uid="uid://c0y0nlv6oebkb" path="res://objects/world/tree_small.tscn" id="17_vjp0n"]
+[ext_resource type="PackedScene" uid="uid://c6kcq71w7pxsd" path="res://objects/world/tree_up.tscn" id="18_07dis"]
+[ext_resource type="PackedScene" uid="uid://cxhxnrasr3hkp" path="res://objects/world/tree_down.tscn" id="19_u1mpc"]
+[ext_resource type="PackedScene" uid="uid://osy3f503ptvv" path="res://objects/world/finish_line.tscn" id="20_8gugk"]
+[ext_resource type="PackedScene" uid="uid://ct4av3g6c61im" path="res://objects/world/decor.tscn" id="20_vxsx0"]
+[ext_resource type="PackedScene" uid="uid://cjrye2tglqd25" path="res://objects/world/decor_2.tscn" id="21_0ua06"]
+[ext_resource type="PackedScene" uid="uid://cjnd5vxthkqbx" path="res://objects/world/wood.tscn" id="21_lyolc"]
+[ext_resource type="Script" path="res://scripts/race_finish.gd" id="23_78gvy"]
+[ext_resource type="PackedScene" uid="uid://cokd4ob8siiav" path="res://objects/world/rock.tscn" id="23_w361j"]
+[ext_resource type="Script" path="res://scripts/buttons/exit_button.gd" id="26_i2d0b"]
+[ext_resource type="FontFile" uid="uid://dwb8178gf6rua" path="res://assets/PressStart2P-Regular.ttf" id="27_pncgu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4q0cv"]
+size = Vector2(266, 20)
+
+[node name="race" type="Node"]
+
+[node name="World" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Block" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(640, 576)
+
+[node name="Block2" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(576, 576)
+
+[node name="Block3" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(512, 576)
+
+[node name="Block4" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(704, 576)
+
+[node name="Block5" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(768, 576)
+
+[node name="Block47" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(640, -64)
+
+[node name="Block48" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(576, -64)
+
+[node name="Block49" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(512, -64)
+
+[node name="Block50" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(704, -64)
+
+[node name="Block81" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(384, -64)
+
+[node name="Block82" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(320, -64)
+
+[node name="Block83" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(256, -64)
+
+[node name="Block84" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(448, -64)
+
+[node name="Block85" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(960, -64)
+
+[node name="Block86" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(896, -64)
+
+[node name="Block87" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(832, -64)
+
+[node name="Block88" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(1024, -64)
+
+[node name="Block51" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(768, -64)
+
+[node name="Block6" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(832, 256)
+
+[node name="Block7" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(832, 320)
+
+[node name="Block8" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(832, 384)
+
+[node name="Block9" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(832, 448)
+
+[node name="Block10" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(832, 512)
+
+[node name="Block52" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(192, 256)
+
+[node name="Block53" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(192, 320)
+
+[node name="Block54" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(192, 384)
+
+[node name="Block55" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(192, 448)
+
+[node name="Block57" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(192, 0)
+
+[node name="Block58" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(192, 64)
+
+[node name="Block59" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(192, 128)
+
+[node name="Block60" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(192, 192)
+
+[node name="Block61" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(192, 576)
+
+[node name="Block62" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(192, 640)
+
+[node name="Block63" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(192, 704)
+
+[node name="Block64" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(192, 768)
+
+[node name="Block56" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(192, 512)
+
+[node name="Block11" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(512, 192)
+
+[node name="Block12" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(576, 192)
+
+[node name="Block13" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(640, 192)
+
+[node name="Block14" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(704, 192)
+
+[node name="Block25" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(576, 512)
+
+[node name="Block26" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(640, 512)
+
+[node name="Block27" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(704, 512)
+
+[node name="Block15" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(768, 192)
+
+[node name="Block42" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(512, 832)
+
+[node name="Block43" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(576, 832)
+
+[node name="Block44" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(640, 832)
+
+[node name="Block45" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(704, 832)
+
+[node name="Block46" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(768, 832)
+
+[node name="Block73" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(832, 832)
+
+[node name="Block74" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(896, 832)
+
+[node name="Block75" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(960, 832)
+
+[node name="Block76" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(1024, 832)
+
+[node name="Block77" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(256, 832)
+
+[node name="Block78" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(320, 832)
+
+[node name="Block79" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(384, 832)
+
+[node name="Block80" parent="World" instance=ExtResource("3_pc4rd")]
+position = Vector2(448, 832)
+
+[node name="Block16" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(448, 256)
+
+[node name="Block17" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(448, 320)
+
+[node name="Block18" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(448, 384)
+
+[node name="Block19" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(448, 448)
+
+[node name="Block20" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(448, 512)
+
+[node name="Block37" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(1088, 256)
+
+[node name="Block38" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(1088, 320)
+
+[node name="Block39" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(1088, 384)
+
+[node name="Block40" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(1088, 448)
+
+[node name="Block65" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(1088, 0)
+
+[node name="Block66" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(1088, 64)
+
+[node name="Block67" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(1088, 128)
+
+[node name="Block68" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(1088, 192)
+
+[node name="Block69" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(1088, 576)
+
+[node name="Block70" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(1088, 640)
+
+[node name="Block71" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(1088, 704)
+
+[node name="Block72" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(1088, 768)
+
+[node name="Block41" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(1088, 512)
+
+[node name="Block21" parent="World" instance=ExtResource("10_88grr")]
+position = Vector2(832, 576)
+
+[node name="Block22" parent="World" instance=ExtResource("12_gs4ch")]
+position = Vector2(448, 576)
+
+[node name="Block23" parent="World" instance=ExtResource("9_cs6dc")]
+position = Vector2(832, 192)
+
+[node name="Block24" parent="World" instance=ExtResource("8_xejox")]
+position = Vector2(448, 192)
+
+[node name="Block28" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(1024, 384)
+
+[node name="Block31" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(640, 128)
+
+[node name="Block32" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(640, 64)
+
+[node name="Block33" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(640, 0)
+
+[node name="Block93" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(704, 128)
+
+[node name="Block94" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(704, 64)
+
+[node name="Block95" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(704, 0)
+
+[node name="Block96" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(768, 128)
+
+[node name="Block97" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(768, 64)
+
+[node name="Block98" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(768, 0)
+
+[node name="Block99" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(832, 128)
+
+[node name="Block100" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(832, 64)
+
+[node name="Block101" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(832, 0)
+
+[node name="Block102" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(576, 128)
+
+[node name="Block103" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(576, 64)
+
+[node name="Block104" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(576, 0)
+
+[node name="Block105" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(512, 128)
+
+[node name="Block106" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(512, 64)
+
+[node name="Block107" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(512, 0)
+
+[node name="Block108" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(448, 128)
+
+[node name="Block109" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(448, 64)
+
+[node name="Block110" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(448, 0)
+
+[node name="Block34" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(640, 768)
+
+[node name="Block35" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(640, 704)
+
+[node name="Block36" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(640, 640)
+
+[node name="Block111" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(704, 768)
+
+[node name="Block112" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(704, 704)
+
+[node name="Block113" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(704, 640)
+
+[node name="Block114" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(768, 768)
+
+[node name="Block115" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(768, 704)
+
+[node name="Block116" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(768, 640)
+
+[node name="Block117" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(832, 768)
+
+[node name="Block118" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(832, 704)
+
+[node name="Block119" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(832, 640)
+
+[node name="Block120" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(576, 768)
+
+[node name="Block121" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(576, 704)
+
+[node name="Block122" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(576, 640)
+
+[node name="Block123" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(512, 768)
+
+[node name="Block124" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(512, 704)
+
+[node name="Block125" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(512, 640)
+
+[node name="Block126" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(448, 768)
+
+[node name="Block127" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(448, 704)
+
+[node name="Block128" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(448, 640)
+
+[node name="Block29" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(960, 384)
+
+[node name="Block30" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(896, 384)
+
+[node name="Block129" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(1024, 448)
+
+[node name="Block130" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(960, 448)
+
+[node name="Block131" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(896, 448)
+
+[node name="Block132" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(1024, 512)
+
+[node name="Block133" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(960, 512)
+
+[node name="Block134" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(896, 512)
+
+[node name="Block135" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(1024, 576)
+
+[node name="Block136" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(960, 576)
+
+[node name="Block137" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(896, 576)
+
+[node name="Block138" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(1024, 640)
+
+[node name="Block139" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(960, 640)
+
+[node name="Block140" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(896, 640)
+
+[node name="Block147" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(1024, 64)
+
+[node name="Block148" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(960, 64)
+
+[node name="Block149" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(896, 64)
+
+[node name="Block162" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(1024, 0)
+
+[node name="Block163" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(960, 0)
+
+[node name="Block164" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(896, 0)
+
+[node name="Block150" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(1024, 128)
+
+[node name="Block151" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(960, 128)
+
+[node name="Block152" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(896, 128)
+
+[node name="Block153" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(1024, 192)
+
+[node name="Block154" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(960, 192)
+
+[node name="Block155" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(896, 192)
+
+[node name="Block156" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(1024, 256)
+
+[node name="Block157" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(960, 256)
+
+[node name="Block158" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(896, 256)
+
+[node name="Block159" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(1024, 320)
+
+[node name="Block160" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(960, 320)
+
+[node name="Block161" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(896, 320)
+
+[node name="Block141" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(1024, 704)
+
+[node name="Block142" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(960, 704)
+
+[node name="Block143" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(896, 704)
+
+[node name="Block144" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(1024, 768)
+
+[node name="Block145" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(960, 768)
+
+[node name="Block146" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(896, 768)
+
+[node name="Block165" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(384, 384)
+
+[node name="Block166" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(320, 384)
+
+[node name="Block167" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(256, 384)
+
+[node name="Block168" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(384, 448)
+
+[node name="Block169" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(320, 448)
+
+[node name="Block170" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(256, 448)
+
+[node name="Block171" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(384, 512)
+
+[node name="Block172" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(320, 512)
+
+[node name="Block173" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(256, 512)
+
+[node name="Block174" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(384, 576)
+
+[node name="Block175" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(320, 576)
+
+[node name="Block176" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(256, 576)
+
+[node name="Block177" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(384, 640)
+
+[node name="Block178" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(320, 640)
+
+[node name="Block179" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(256, 640)
+
+[node name="Block180" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(384, 64)
+
+[node name="Block181" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(320, 64)
+
+[node name="Block182" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(256, 64)
+
+[node name="Block183" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(384, 0)
+
+[node name="Block184" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(320, 0)
+
+[node name="Block185" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(256, 0)
+
+[node name="Block186" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(384, 128)
+
+[node name="Block187" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(320, 128)
+
+[node name="Block188" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(256, 128)
+
+[node name="Block189" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(384, 192)
+
+[node name="Block190" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(320, 192)
+
+[node name="Block191" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(256, 192)
+
+[node name="Block192" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(384, 256)
+
+[node name="Block193" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(320, 256)
+
+[node name="Block194" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(256, 256)
+
+[node name="Block195" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(384, 320)
+
+[node name="Block196" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(320, 320)
+
+[node name="Block197" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(256, 320)
+
+[node name="Block198" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(384, 704)
+
+[node name="Block199" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(320, 704)
+
+[node name="Block200" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(256, 704)
+
+[node name="Block201" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(384, 768)
+
+[node name="Block202" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(320, 768)
+
+[node name="Block203" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(256, 768)
+
+[node name="Block89" parent="World" instance=ExtResource("2_v7qjj")]
+position = Vector2(192, 832)
+
+[node name="Block207" parent="World" instance=ExtResource("2_v7qjj")]
+position = Vector2(512, 512)
+
+[node name="Block90" parent="World" instance=ExtResource("4_a1uid")]
+position = Vector2(1088, 832)
+
+[node name="Block206" parent="World" instance=ExtResource("4_a1uid")]
+position = Vector2(768, 512)
+
+[node name="Block91" parent="World" instance=ExtResource("6_cee8s")]
+position = Vector2(192, -64)
+
+[node name="Block204" parent="World" instance=ExtResource("6_cee8s")]
+position = Vector2(512, 256)
+
+[node name="Block92" parent="World" instance=ExtResource("11_aubhi")]
+position = Vector2(1088, -64)
+
+[node name="Block205" parent="World" instance=ExtResource("11_aubhi")]
+position = Vector2(768, 256)
+
+[node name="Block208" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(576, 256)
+
+[node name="Block209" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(640, 256)
+
+[node name="Block210" parent="World" instance=ExtResource("7_je5jo")]
+position = Vector2(704, 256)
+
+[node name="Block211" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(512, 320)
+
+[node name="Block212" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(512, 384)
+
+[node name="Block213" parent="World" instance=ExtResource("1_s0mxl")]
+position = Vector2(512, 448)
+
+[node name="Block214" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(768, 320)
+
+[node name="Block215" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(768, 384)
+
+[node name="Block216" parent="World" instance=ExtResource("5_hmrdw")]
+position = Vector2(768, 448)
+
+[node name="Block217" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(576, 320)
+
+[node name="Block218" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(640, 320)
+
+[node name="Block219" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(704, 320)
+
+[node name="Block220" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(576, 384)
+
+[node name="Block221" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(640, 384)
+
+[node name="Block222" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(704, 384)
+
+[node name="Block223" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(576, 448)
+
+[node name="Block224" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(640, 448)
+
+[node name="Block225" parent="World" instance=ExtResource("14_4errp")]
+position = Vector2(704, 448)
+
+[node name="Block226" parent="World" instance=ExtResource("19_u1mpc")]
+position = Vector2(576, 448)
+
+[node name="Block227" parent="World" instance=ExtResource("18_07dis")]
+position = Vector2(576, 320)
+
+[node name="Block228" parent="World" instance=ExtResource("16_1b7a3")]
+position = Vector2(576, 384)
+
+[node name="Block229" parent="World" instance=ExtResource("19_u1mpc")]
+position = Vector2(704, 384)
+
+[node name="Block230" parent="World" instance=ExtResource("18_07dis")]
+position = Vector2(704, 320)
+
+[node name="Block231" parent="World" instance=ExtResource("17_vjp0n")]
+position = Vector2(704, 448)
+
+[node name="Block232" parent="World" instance=ExtResource("21_lyolc")]
+position = Vector2(640, 320)
+
+[node name="Block233" parent="World" instance=ExtResource("17_vjp0n")]
+position = Vector2(640, 384)
+
+[node name="Block234" parent="World" instance=ExtResource("23_w361j")]
+position = Vector2(640, 448)
+
+[node name="Block235" parent="World" instance=ExtResource("20_vxsx0")]
+position = Vector2(352, 96)
+
+[node name="Block236" parent="World" instance=ExtResource("20_vxsx0")]
+position = Vector2(960, 192)
+
+[node name="Block237" parent="World" instance=ExtResource("20_vxsx0")]
+position = Vector2(256, 576)
+
+[node name="Block238" parent="World" instance=ExtResource("20_vxsx0")]
+position = Vector2(832, 608)
+
+[node name="Block239" parent="World" instance=ExtResource("21_0ua06")]
+position = Vector2(1024, 768)
+
+[node name="Block240" parent="World" instance=ExtResource("21_0ua06")]
+position = Vector2(320, 768)
+
+[node name="Block241" parent="World" instance=ExtResource("21_0ua06")]
+position = Vector2(416, 256)
+
+[node name="Block242" parent="World" instance=ExtResource("21_0ua06")]
+position = Vector2(768, 0)
+
+[node name="player1" parent="." groups=["player1"] instance=ExtResource("16_6y4pe")]
+position = Vector2(256, 448)
+issecondplayer = true
+
+[node name="player2" parent="." groups=["player2"] instance=ExtResource("16_6y4pe")]
+position = Vector2(384, 448)
+
+[node name="finishes" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("23_78gvy")
+
+[node name="Block235" parent="finishes" instance=ExtResource("20_8gugk")]
+position = Vector2(224, 384)
+
+[node name="Block236" parent="finishes" instance=ExtResource("20_8gugk")]
+position = Vector2(288, 384)
+
+[node name="Block237" parent="finishes" instance=ExtResource("20_8gugk")]
+position = Vector2(352, 384)
+
+[node name="Block238" parent="finishes" instance=ExtResource("20_8gugk")]
+position = Vector2(416, 384)
+
+[node name="Block239" parent="finishes" instance=ExtResource("20_8gugk")]
+position = Vector2(864, 384)
+
+[node name="Block240" parent="finishes" instance=ExtResource("20_8gugk")]
+position = Vector2(928, 384)
+
+[node name="Block241" parent="finishes" instance=ExtResource("20_8gugk")]
+position = Vector2(992, 384)
+
+[node name="Block242" parent="finishes" instance=ExtResource("20_8gugk")]
+position = Vector2(1056, 384)
+
+[node name="Area2D" type="Area2D" parent="finishes"]
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="finishes/Area2D"]
+position = Vector2(315, 384)
+shape = SubResource("RectangleShape2D_4q0cv")
+
+[node name="Area2D2" type="Area2D" parent="finishes"]
+position = Vector2(640, 0)
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="finishes/Area2D2"]
+position = Vector2(315, 384)
+shape = SubResource("RectangleShape2D_4q0cv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 384)
+scale = Vector2(2, 2)
+zoom = Vector2(0.65, 0.65)
+position_smoothing_speed = 3.0
+rotation_smoothing_speed = 3.0
+script = ExtResource("15_l0uvh")
+maxzoom = 1.0
+staticcam = true
+
+[node name="UI" type="Control" parent="Camera2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Camera2D/UI"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -208.0
+offset_top = -272.0
+offset_right = 212.0
+offset_bottom = -239.0
+theme_override_fonts/font = ExtResource("27_pncgu")
+theme_override_font_sizes/font_size = 30
+text = "Left Player Win"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Camera2D/UI"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -208.0
+offset_top = -272.0
+offset_right = 212.0
+offset_bottom = -239.0
+theme_override_fonts/font = ExtResource("27_pncgu")
+theme_override_font_sizes/font_size = 30
+text = "Right Player Win"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Camera2D/UI"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -480.0
+offset_top = 240.0
+offset_right = -352.0
+offset_bottom = 279.0
+theme_override_fonts/font = ExtResource("27_pncgu")
+theme_override_font_sizes/font_size = 30
+text = "0"
+
+[node name="Label3" type="Label" parent="Camera2D/UI"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -480.0
+offset_top = -272.0
+offset_right = -416.0
+offset_bottom = -233.0
+theme_override_fonts/font = ExtResource("27_pncgu")
+theme_override_font_sizes/font_size = 30
+text = "0"
+
+[node name="Label4" type="Label" parent="Camera2D/UI"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 416.0
+offset_top = -272.0
+offset_right = 480.0
+offset_bottom = -233.0
+theme_override_fonts/font = ExtResource("27_pncgu")
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 2
+
+[node name="Button" type="Button" parent="Camera2D/UI"]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 0
+offset_left = 352.0
+offset_top = 224.0
+offset_right = 480.0
+offset_bottom = 262.0
+theme_override_fonts/font = ExtResource("27_pncgu")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+script = ExtResource("26_i2d0b")
+
+[connection signal="body_entered" from="finishes/Area2D" to="player1" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="finishes/Area2D" to="player2" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="finishes/Area2D2" to="player1" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="finishes/Area2D2" to="player2" method="_on_area_2d_2_body_entered"]

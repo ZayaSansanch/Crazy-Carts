@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://osy3f503ptvv"]
+
+[ext_resource type="Texture2D" uid="uid://dyra6tdxrmcun" path="res://assets/Misc_props (16 x 16).png" id="1_ttou7"]
+
+[node name="Block" type="RigidBody2D"]
+gravity_scale = 0.0
+freeze = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+scale = Vector2(4, 4)
+texture = ExtResource("1_ttou7")
+region_enabled = true
+region_rect = Rect2(112, 0, 16, 16)
+region_filter_clip_enabled = true
